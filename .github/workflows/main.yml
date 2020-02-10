@@ -16,8 +16,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install git+https://github.com/eisen-ai/eisen-core.git
           pip install git+https://github.com/eisen-ai/eisen-cli.git
-          apt-get update
-          apt-get install -y python3-sphinx
+          sudo apt-get update
+          sudo apt-get install -y python3-sphinx
       - name: Build documentation
         run: |
           make html
