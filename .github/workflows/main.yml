@@ -1,0 +1,32 @@
+name: Publish Docs
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install git+https://github.com/eisen-ai/eisen-core.git
+          pip install git+https://github.com/eisen-ai/eisen-cli.git
+          apt-get update
+          apt-get install -y python3-sphinx
+      - name: Build documentation
+        run: |
+          make html
+      - name: Authenticate into Google Cloud Platform
+        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          service_account_email: ${{ secrets.GCLOUD_EMAIL }}
+          service_account_key: ${{ secrets.GCLOUD_AUTH }}
+      - name: Publish Docs
+        run: |
+          gcloud components install core --quiet
+          gsutil cp -r build/* gs://docs.eisen.ai/
