@@ -30,4 +30,4 @@ jobs:
       - name: Publish Docs
         run: |
           gcloud components install core --quiet
-          gsutil cp -r build/* gs://docs.eisen.ai/
+          gsutil cp -r build/html/* gs://docs.eisen.ai/
