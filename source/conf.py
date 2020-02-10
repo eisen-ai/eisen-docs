@@ -1,8 +1,3 @@
-import sys
-import os
-
-from pytorch_sphinx_theme import __version__
-
 from sphinx.ext.autodoc import between
 
 # If extensions (or modules to document with autodoc) are in another directory,
