@@ -4,7 +4,7 @@ Tutorials
 
 .. contents:: Table of Contents
 
-We are currently developing tutorials demonstrating and teching how to most effectively use Eisen. Our tutorials
+We are currently developing tutorials demonstrating and teaching how to most effectively use Eisen. Our tutorials
 run on Google Colab http://colab.google.com/ which provides free GPUs for experimentation and quick testing of
 deep learning models and beyond. Google Colab notebooks are very similar to Jupyter notebooks.
 
