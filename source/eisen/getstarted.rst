@@ -176,7 +176,7 @@ example to implement a Module compatible with Eisen:
             return results
 
 
-Implementing I/O Workflows
+Implementing Workflows
 ===========================
 
 ToDo
