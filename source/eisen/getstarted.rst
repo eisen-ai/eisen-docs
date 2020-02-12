@@ -62,13 +62,13 @@ Docker CE
 
 
 *****************************
-Contributint to Eisen
+Contributing to Eisen
 *****************************
 
 Eisen is open to contributions by the community. Anyone can contribute to Eisen and we are constantly working to
 reduce the number of guidelines that need to be followed when building it.
 
-The truly important aspect is to keep functionality organized in many small composible blocks. The blocks should be
+The truly important aspect is to keep functionality organized in many small composable blocks. The blocks should be
 readable, easily understandable, documented (possibly) and tested (possibly). If you decide to contribute, open a
 pull request on GitHub and we will be happy to help you and fill in the blanks for you, if necessary.
 
