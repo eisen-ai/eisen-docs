@@ -1,5 +1,9 @@
 name: Publish Docs
-on: [push]
+on:
+  push:
+    branches:
+      - master
+  repository_dispatch:
 
 jobs:
   build:
