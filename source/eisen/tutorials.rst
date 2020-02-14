@@ -13,8 +13,11 @@ We currently have a few tutorials showcasing Eisen.
 +---------------------------------------------------------------------+-------------------------------+
 | Title                                                               | URL                           |
 +=====================================================================+===============================+
+| Minimal Example with Medical Segmentation Decathlon                 | http://bit.ly/2HjLlfh         |
+| A simplified example of Eisen on a real-life use case               |                               |
++---------------------------------------------------------------------+-------------------------------+
 | Volumetric Segmentation Medical Segmentation Decathlon              | http://bit.ly/39veXlZ         |
-| An example of Eisen on a real-life use case column 2                |                               |
+| An example of Eisen on a real-life use case                         |                               |
 +---------------------------------------------------------------------+-------------------------------+
 | MNIST classification using torchvision components with Eisen        | http://bit.ly/37oBdMZ         |
 | Showcasing the capability of Eisen to work with other software      |                               |
