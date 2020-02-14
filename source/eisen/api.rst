@@ -269,6 +269,9 @@ Refer to the following documentation to learn more.
 .. autoclass:: Training
    :members: __init__
 
+.. autoclass:: TrainingAMP
+   :members: __init__
+
 .. autoclass:: Testing
    :members: __init__
 
@@ -276,3 +279,30 @@ Refer to the following documentation to learn more.
    :members: __init__
 
 
+*********************
+Eisen Wrappers
+*********************
+
+Many packages in the PyTorch echosystem such as torchvision, are not fully compatible with Eisen. Eisen makes
+heavy use of dictionaries throught most of the objects in the module `eisen.utils` and beyond.
+
+Dataset entries are represented as dictionaries, batches are also dictionaries, input and output of modules (models,
+losses, metrics) are also expected to be dictionaries.
+
+This architecture is unfortunately not universally adopted, and since it is the key of the flexibility of Eisen,
+adaptors have been developed in order to make functionalities inherited from other packages fully compatible with Eisen
+with no significant impact on performance.
+
+Our wrappers are adaptors that perform simple translation of input and outputs variables from and to the specific format
+expected by Eisen. We include below the documentation of our wrappers with usage examples.
+
+.. automodule:: eisen.utils
+
+.. autoclass:: EisenModuleWrapper
+   :members: __init__
+
+.. autoclass:: EisenTransformWrapper
+   :members: __init__
+
+.. autoclass:: EisenDatasetWrapper
+   :members: __init__
