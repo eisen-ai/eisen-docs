@@ -1,11 +1,5 @@
 *********************
-Eisen
-*********************
-.. contents:: Table of Contents
-
-
-*********************
-Eisen.datasets
+Datasets
 *********************
 
 Datasets are used in Eisen to bring data into the training/validation/testing or serving pipeline. They are core
@@ -74,7 +68,7 @@ The transforms are fed individual entries of the list and act on one or multiple
 
 
 *********************
-Eisen.io
+I/O
 *********************
 
 Eisen I/O functionality is contained in this module. I/O functionality is implemented by transforms. That is, this
@@ -122,7 +116,7 @@ and the call can be done in this way:
 
 
 *********************
-Eisen.transforms
+Transforms
 *********************
 
 .. automodule:: eisen.transforms
@@ -231,7 +225,7 @@ for deep learning tasks.
 
 
 *********************
-Eisen.utils.workflows
+Workflows
 *********************
 
 Workflows realize high level functionality that joins several building blocks such as losses, metrics, transforms
@@ -280,7 +274,7 @@ Refer to the following documentation to learn more.
 
 
 *********************
-Eisen Wrappers
+Wrappers
 *********************
 
 Many packages in the PyTorch echosystem such as torchvision, are not fully compatible with Eisen. Eisen makes

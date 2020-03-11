@@ -22,5 +22,11 @@ We currently have a few tutorials showcasing Eisen.
 | MNIST classification using torchvision components with Eisen        | http://bit.ly/37oBdMZ         |
 | Showcasing the capability of Eisen to work with other software      |                               |
 +---------------------------------------------------------------------+-------------------------------+
+| MNIST classification using torchvision and Eisen with automatic     | http://bit.ly/2Q69Cdy         |
+| mixed precision (AMP) via NVIDIA Apex for PyTorch                   |                               |
++---------------------------------------------------------------------+-------------------------------+
+| Demonstration of the Eisen TensorboardSummaryHook which exports     | http://bit.ly/2IERhjA         |
+| workflow data (inputs, outputs, metrics and losses) to tensorboard  |                               |
++---------------------------------------------------------------------+-------------------------------+
 
 More tutorials and examples will be published soon.
