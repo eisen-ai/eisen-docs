@@ -24,6 +24,7 @@ Eisen includes functionality to handle different standard popular datasets that 
 it also includes the capability of supplying own datasets which can contain arbitrary data.
 
 Right now, eisen supports the following public datasets:
+
 +-------------------------------------------------------+---------------------------------------+-----------------------------------------+
 | Title                                                 | URL                                   | Module                                  |
 +=======================================================+=======================================+==========================================
