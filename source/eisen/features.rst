@@ -146,6 +146,9 @@ third party code, it is possible to use wrappers.
 This is best shown in the example at http://bit.ly/37oBdMZ where MNIST training and testing is done via Eisen on
 a dataset imported from `torchvision` and using models and transformations obtained from third parties.
 
+Documentation about how wrappers work in Eisen and what their purpose exactly is can be found here
+http://docs.eisen.ai/eisen/api.html#wrappers .
+
 
 Simplicity
 ================================
