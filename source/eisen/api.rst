@@ -386,10 +386,10 @@ Refer to the following documentation to learn more.
     :special-members:
 
 .. autoclass:: SaveTorchModel
-   :members: __init__
+   :members: __init__, __call__
 
 .. autoclass:: SaveONNXModel
-   :members: __init__
+   :members: __init__, __call__
 
 
 *********************
