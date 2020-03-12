@@ -28,11 +28,11 @@ Right now, eisen supports the following public datasets:
 +-------------------------------------------------------+---------------------------------------+-----------------------------------------+
 | Title                                                 | URL                                   | Module                                  |
 +=======================================================+=======================================+=========================================+
-|Medical segmentation decathlon                         | http://medicaldecathlon.com           | `eisen.datasets.MSDDataset`             |
+| Medical segmentation decathlon                        | http://medicaldecathlon.com           | `eisen.datasets.MSDDataset`             |
 +-------------------------------------------------------+---------------------------------------+-----------------------------------------+
-|Patch Camelyon Datasets                                | https://github.com/basveeling/pcam    | `eisen.datasets.PatchCamelyon`          |
+| Patch Camelyon Datasets                               | https://github.com/basveeling/pcam    | `eisen.datasets.PatchCamelyon`          |
 +-------------------------------------------------------+---------------------------------------+-----------------------------------------+
-|Personalized dataset as JSON file (see below)          | None                                  | `eisen.datasets.JsonDataset`            |
+| Personalized dataset as JSON file (see below)         | None                                  | `eisen.datasets.JsonDataset`            |
 +-------------------------------------------------------+---------------------------------------+-----------------------------------------+
 
 Personalized datasets can be created in JSON format.
