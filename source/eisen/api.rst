@@ -69,6 +69,9 @@ The transforms are fed individual entries of the list and act on one or multiple
 .. autoclass:: CAMUS
    :members: __init__
 
+.. autoclass:: RSNAIntracranialHemorrhageDetection
+   :members: __init__
+
 
 *********************
 I/O
@@ -118,6 +121,9 @@ and the call can be done in this way:
    :members: __init__
 
 .. autoclass:: LoadITKFromFilename
+   :members: __init__
+
+.. autoclass:: LoadDICOMFromFilename
    :members: __init__
 
 
