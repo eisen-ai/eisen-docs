@@ -32,7 +32,7 @@ Right now, eisen supports the following public datasets:
 +-------------------------------------------------------+---------------------------------------+-----------------------------------------+
 | Patch Camelyon Datasets                               | http://bit.ly/3daNDfs                 | `eisen.datasets.PatchCamelyon`          |
 +-------------------------------------------------------+---------------------------------------+-----------------------------------------+
-| CAMUS Ultrasound Dataset                              | http://bit.ly/2Wdc8T6                 | `eisen.datasets.CAMUS`          |
+| CAMUS Ultrasound Dataset                              | http://bit.ly/2Wdc8T6                 | `eisen.datasets.CAMUS`                  |
 +-------------------------------------------------------+---------------------------------------+-----------------------------------------+
 | Personalized dataset as JSON file (see below)         | None                                  | `eisen.datasets.JsonDataset`            |
 +-------------------------------------------------------+---------------------------------------+-----------------------------------------+
