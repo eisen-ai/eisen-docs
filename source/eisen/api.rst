@@ -66,6 +66,9 @@ The transforms are fed individual entries of the list and act on one or multiple
 .. autoclass:: PatchCamelyon
    :members: __init__
 
+.. autoclass:: CAMUS
+   :members: __init__
+
 
 *********************
 I/O
