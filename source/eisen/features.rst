@@ -34,7 +34,7 @@ Right now, eisen supports the following public datasets:
 +-------------------------------------------------------+---------------------------------------+-------------------------------------------------------+
 | CAMUS Ultrasound Dataset                              | http://bit.ly/2Wdc8T6                 | `eisen.datasets.CAMUS`                                |
 +-------------------------------------------------------+---------------------------------------+-------------------------------------------------------+
-| Intracranial Hemorrhage Detection Challenge (RSNA)    | http://bit.ly/3cXpN6G                 | `eisen.datasets.RSNAIntracranialHemorrhageDetection` |
+| Intracranial Hemorrhage Detection Challenge (RSNA)    | http://bit.ly/3cXpN6G                 | `eisen.datasets.RSNAIntracranialHemorrhageDetection`  |
 +-------------------------------------------------------+---------------------------------------+-------------------------------------------------------+
 | Personalized dataset as JSON file (see below)         | None                                  | `eisen.datasets.JsonDataset`                          |
 +-------------------------------------------------------+---------------------------------------+-------------------------------------------------------+
