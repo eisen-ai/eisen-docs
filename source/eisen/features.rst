@@ -26,17 +26,17 @@ it also includes the capability of supplying own datasets which can contain arbi
 Right now, eisen supports the following public datasets:
 
 +-------------------------------------------------------+---------------------------------------+-------------------------------------------------------+
-| Title                                                 | URL                                   | Module                                                |
+| Title                                                 | URL                                   | Module (`eisen.datasets.` prefix)                     |
 +=======================================================+=======================================+=======================================================+
-| Medical segmentation decathlon                        | http://bit.ly/2w6YqX6                 | `eisen.datasets.MSDDataset`                           |
+| Medical segmentation decathlon                        | http://bit.ly/2w6YqX6                 | `MSDDataset`                                          |
 +-------------------------------------------------------+---------------------------------------+-------------------------------------------------------+
-| Patch Camelyon Datasets                               | http://bit.ly/3daNDfs                 | `eisen.datasets.PatchCamelyon`                        |
+| Patch Camelyon Datasets                               | http://bit.ly/3daNDfs                 | `PatchCamelyon`                                       |
 +-------------------------------------------------------+---------------------------------------+-------------------------------------------------------+
-| CAMUS Ultrasound Dataset                              | http://bit.ly/2Wdc8T6                 | `eisen.datasets.CAMUS`                                |
+| CAMUS Ultrasound Dataset                              | http://bit.ly/2Wdc8T6                 | `CAMUS`                                               |
 +-------------------------------------------------------+---------------------------------------+-------------------------------------------------------+
-| Intracranial Hemorrhage Detection Challenge (RSNA)    | http://bit.ly/3cXpN6G                 | `eisen.datasets.RSNAIntracranialHemorrhageDetection`  |
+| Intracranial Hemorrhage Detection Challenge (RSNA)    | http://bit.ly/3cXpN6G                 | `RSNAIntracranialHemorrhageDetection`                 |
 +-------------------------------------------------------+---------------------------------------+-------------------------------------------------------+
-| Personalized dataset as JSON file (see below)         | None                                  | `eisen.datasets.JsonDataset`                          |
+| Personalized dataset as JSON file (see below)         | None                                  | `JsonDataset`                                         |
 +-------------------------------------------------------+---------------------------------------+-------------------------------------------------------+
 
 
