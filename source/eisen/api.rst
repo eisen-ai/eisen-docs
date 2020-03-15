@@ -117,6 +117,9 @@ and the call can be done in this way:
 .. autoclass:: LoadNiftyFromFilename
    :members: __init__
 
+.. autoclass:: LoadITKFromFilename
+   :members: __init__
+
 
 *********************
 Transforms
@@ -199,7 +202,16 @@ for deep learning tasks.
 .. autoclass:: ResampleNiftiVolumes
    :members: __init__
 
+.. autoclass:: ResampleITKVolumes
+   :members: __init__
+
 .. autoclass:: NiftiToNumpy
+   :members: __init__
+
+.. autoclass:: ITKToNumpy
+   :members: __init__
+
+.. autoclass:: PilToNumpy
    :members: __init__
 
 .. autoclass:: CropCenteredSubVolumes
@@ -224,6 +236,9 @@ for deep learning tasks.
    :members: __init__
 
 .. autoclass:: FixedMeanStdNormalization
+   :members: __init__
+
+.. autoclass:: RepeatTensor
    :members: __init__
 
 
