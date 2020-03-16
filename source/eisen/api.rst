@@ -72,6 +72,9 @@ The transforms are fed individual entries of the list and act on one or multiple
 .. autoclass:: RSNAIntracranialHemorrhageDetection
    :members: __init__
 
+.. autoclass:: RSNABoneAgeChallenge
+   :members: __init__
+
 
 *********************
 I/O
@@ -124,6 +127,9 @@ and the call can be done in this way:
    :members: __init__
 
 .. autoclass:: LoadDICOMFromFilename
+   :members: __init__
+
+.. autoclass:: LoadPILImageFromFilename
    :members: __init__
 
 
