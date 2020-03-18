@@ -8,6 +8,12 @@ Eisen Documentation
 Eisen is a software package to enable simple and quick development and experimentation with
 deep learning models. It is designed for applications in healthcare.
 
+Eisen provides a complete set of building blocks and everything in between:
+
+.. |components| image:: eisen/static/components.jpg
+
+|components|
+
 Installing Eisen is extremely simple.
 
 .. code-block:: bash
@@ -33,6 +39,19 @@ We have subdivided eisen in several sub-packages:
 - Eisen CLI `pip3 install eisen-cli`
 
 You can also obtain Eisen as a Docker image which can be downloaded from dockerhub `(TBA)`
+
+Eisen core modules are summarized in the figure below:
+
+.. |modules| image:: eisen/static/modules.jpg
+    :scale: 50%
+
+|modules|
+
+Building with Eisen is simple. A typical project follows the architecture summarized in the figure below:
+
+.. |workflow| image:: eisen/static/workflow.jpg
+
+|workflow|
 
 
 Links
