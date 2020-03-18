@@ -255,6 +255,96 @@ for deep learning tasks.
 
 
 *********************
+Models
+*********************
+
+In order to favor reproducibility of deep learning approaches and easy benchmarking, as well as
+providing "starter-kit" tools to users approaching a certain problem for the first time,
+we include several well-known neural network architecture within Eisen. This is similar to the approach
+taken by torchvision which ships network architectures for classification, segmentation and beyond within the package.
+
+Models can be used in any custom code, with or without the rest of the functionality provided by Eisen. In this
+sense, they are standard `torch.nn.Module` objects.
+
+Models can be used within Eisen workflows (see below) after wrapping them
+via `EisenModuleWrapper` which is available in the `eisen.utils` submodule. This also allows third party models, such
+as those available in torchvision, to be used within Eisen.
+
+
+Segmentation Models
+=========================
+
+Several models for segmentation are already included in Eisen. These approaches have been successfully used in
+several academic works. Refer to the related publications to obtain more information.
+
+.. automodule:: eisen.models.segmentation
+    :members:
+    :private-members:
+    :special-members:
+
+.. autoclass:: UNet3D
+   :members: __init__
+
+.. autoclass:: UNet
+   :members: __init__
+
+.. autoclass:: VNet
+   :members: __init__
+
+.. autoclass:: ObeliskMIDL
+   :members: __init__
+
+.. autoclass:: HighRes2DNet
+   :members: __init__
+
+.. autoclass:: HighRes3DNet
+   :members: __init__
+
+
+*********************
+Ops
+*********************
+
+Eisen includes various operations that are useful when developing deep learning models.
+The operations are always implemented in PyTorch and derived from the class
+`torch.nn.Module` as suggested by the PyTorch documentation itself.
+Eisen contains implementations of layers, metrics and losses. Losses and metrics
+implementation include methods such as the Dice loss, which find useful
+application especially in tasks belonging to the medical domain.
+
+Losses
+=========================
+
+When optimizing neural network parameters during training, it is crucial to specify a suitable loss
+that pushes the network towards solving the problem at hand. Eisen includes losses that can be optimized during
+training and computed during validation.
+
+.. automodule:: eisen.ops.losses
+    :members:
+    :private-members:
+    :special-members:
+
+.. autoclass:: DiceLoss
+   :members: __init__
+
+
+Metrics
+=========================
+
+Benchmarking, testing and validating models often requires computing metrics that can give an estimate of the
+performance of the network on the problem at hand. Eisen includes metrics modules that can be computed during
+training, validation and testing.
+
+.. automodule:: eisen.ops.metrics
+    :members:
+    :private-members:
+    :special-members:
+
+.. autoclass:: DiceMetric
+   :members: __init__
+
+
+*********************
 Workflows
 *********************
 
