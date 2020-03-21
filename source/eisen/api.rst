@@ -283,22 +283,22 @@ several academic works. Refer to the related publications to obtain more informa
     :special-members:
 
 .. autoclass:: UNet3D
-   :members: __init__
+   :members: __init__, forward
 
 .. autoclass:: UNet
-   :members: __init__
+   :members: __init__, forward
 
 .. autoclass:: VNet
-   :members: __init__
+   :members: __init__, forward
 
 .. autoclass:: ObeliskMIDL
-   :members: __init__
+   :members: __init__, forward
 
 .. autoclass:: HighRes2DNet
-   :members: __init__
+   :members: __init__, forward
 
 .. autoclass:: HighRes3DNet
-   :members: __init__
+   :members: __init__, forward
 
 
 *********************
@@ -325,7 +325,7 @@ training and computed during validation.
     :special-members:
 
 .. autoclass:: DiceLoss
-   :members: __init__
+   :members: __init__, forward
 
 
 Metrics
@@ -341,7 +341,7 @@ training, validation and testing.
     :special-members:
 
 .. autoclass:: DiceMetric
-   :members: __init__
+   :members: __init__, forward
 
 
 *********************
@@ -384,16 +384,16 @@ Refer to the following documentation to learn more.
     :special-members:
 
 .. autoclass:: Training
-   :members: __init__
+   :members: __init__, run
 
 .. autoclass:: TrainingAMP
-   :members: __init__
+   :members: __init__, run
 
 .. autoclass:: Testing
-   :members: __init__
+   :members: __init__, run
 
 .. autoclass:: Validation
-   :members: __init__
+   :members: __init__, run
 
 
 *********************
@@ -538,4 +538,20 @@ expected by Eisen. We include below the documentation of our wrappers with usage
    :members: __init__
 
 .. autoclass:: EisenDatasetWrapper
+   :members: __init__
+
+.. autoclass:: EisenAutoModelParallelModuleWrapper
+   :members: __init__
+
+
+*********************
+Other utilities
+*********************
+
+Eisen contains other utility functions and objects that can be be used to further improve functionality and often
+independently from Eisen itself. Therefore we report the documentation for these modules.
+
+.. automodule:: eisen.utils
+
+.. autoclass:: PipelineExecutionStreamer
    :members: __init__
