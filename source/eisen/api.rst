@@ -75,6 +75,12 @@ The transforms are fed individual entries of the list and act on one or multiple
 .. autoclass:: RSNABoneAgeChallenge
    :members: __init__
 
+.. autoclass:: MedSegCovid19
+   :members: __init__
+
+.. autoclass:: UCSDCovid19
+   :members: __init__
+
 
 *********************
 I/O
