@@ -358,6 +358,7 @@ Workflows realize high level functionality that joins several building blocks su
 optimizers and models together in order to perform operations on them.
 
 .. warning::
+
     Eisen-Core versions after 0.0.5 (Eisen versions after 0.1.6) and current versions installed from GitHub repository
     introduce breaking changes to workflows and wrappers.
     Model or Data parallelism need to be taken care of before passing the model to the workflow.
@@ -542,6 +543,7 @@ Our wrappers are adaptors that perform simple translation of input and outputs v
 expected by Eisen. We include below the documentation of our wrappers with usage examples.
 
 .. warning::
+
     Eisen-Core versions after 0.0.5 (Eisen versions after 0.1.6) and current versions installed from GitHub repository
     introduce breaking changes to workflows and wrappers.
     Wrappers require an instance of a Module, Transform or Dataset rather than a Module, Transform or Dataset type.
@@ -569,4 +571,7 @@ independently from Eisen itself. Therefore we report the documentation for these
 .. automodule:: eisen.utils
 
 .. autoclass:: PipelineExecutionStreamer
+   :members: __init__
+
+.. autoclass:: ModelParallel
    :members: __init__
