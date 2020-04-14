@@ -357,6 +357,12 @@ Workflows
 Workflows realize high level functionality that joins several building blocks such as losses, metrics, transforms
 optimizers and models together in order to perform operations on them.
 
+.. warning::
+    Eisen-Core versions after 0.0.5 (Eisen versions after 0.1.6) and current versions installed from GitHub repository
+    introduce breaking changes to workflows and wrappers.
+    Model or Data parallelism need to be taken care of before passing the model to the workflow.
+    This documentation illustrates the most recent way of using workflows.
+
 Workflows possess unique IDs. It is possible to retrieve this ID as `workflow.id`, where `workflow` is a Workflow
 instance.
 
@@ -529,11 +535,17 @@ Dataset entries are represented as dictionaries, batches are also dictionaries, 
 losses, metrics) are also expected to be dictionaries.
 
 This architecture is unfortunately not universally adopted, and since it is the key of the flexibility of Eisen,
-adaptors have been developed in order to make functionalities inherited from other packages fully compatible with Eisen
+adaptors have been developed in order to make functionality inherited from other packages fully compatible with Eisen
 with no significant impact on performance.
 
 Our wrappers are adaptors that perform simple translation of input and outputs variables from and to the specific format
 expected by Eisen. We include below the documentation of our wrappers with usage examples.
+
+.. warning::
+    Eisen-Core versions after 0.0.5 (Eisen versions after 0.1.6) and current versions installed from GitHub repository
+    introduce breaking changes to workflows and wrappers.
+    Wrappers require an instance of a Module, Transform or Dataset rather than a Module, Transform or Dataset type.
+    This documentation illustrates the most recent way of using wrappers.
 
 .. automodule:: eisen.utils
 
@@ -544,9 +556,6 @@ expected by Eisen. We include below the documentation of our wrappers with usage
    :members: __init__
 
 .. autoclass:: EisenDatasetWrapper
-   :members: __init__
-
-.. autoclass:: EisenAutoModelParallelModuleWrapper
    :members: __init__
 
 
