@@ -396,17 +396,20 @@ Refer to the following documentation to learn more.
     :private-members:
     :special-members:
 
+.. autoclass:: GenericWorkflow
+   :members: __init__, __call__
+
 .. autoclass:: Training
-   :members: __init__, run
+   :members: __init__, __call__, run
 
 .. autoclass:: TrainingAMP
-   :members: __init__, run
+   :members: __init__, __call__, run
 
 .. autoclass:: Testing
-   :members: __init__, run
+   :members: __init__, __call__, run
 
 .. autoclass:: Validation
-   :members: __init__, run
+   :members: __init__, __call__, run
 
 
 *********************
