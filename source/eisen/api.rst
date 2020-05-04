@@ -259,6 +259,12 @@ for deep learning tasks.
 .. autoclass:: RepeatTensor
    :members: __init__
 
+.. autoclass:: WriteNiftiToFile
+   :members: __init__
+
+.. autoclass:: NumpyToNifti
+   :members: __init__
+
 
 *********************
 Models
