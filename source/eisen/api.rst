@@ -81,6 +81,11 @@ The transforms are fed individual entries of the list and act on one or multiple
 .. autoclass:: UCSDCovid19
    :members: __init__
 
+.. autoclass:: PANDA
+   :members: __init__
+
+.. autoclass:: KaggleCovid19
+   :members: __init__
 
 *********************
 I/O
@@ -406,6 +411,9 @@ Refer to the following documentation to learn more.
    :members: __init__, __call__
 
 .. autoclass:: Training
+   :members: __init__, __call__, run
+
+.. autoclass:: TrainingApexAMP
    :members: __init__, __call__, run
 
 .. autoclass:: TrainingAMP
