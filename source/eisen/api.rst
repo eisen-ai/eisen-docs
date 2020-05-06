@@ -87,6 +87,9 @@ The transforms are fed individual entries of the list and act on one or multiple
 .. autoclass:: KaggleCovid19
    :members: __init__
 
+.. autoclass:: ABCDataset
+   :members: __init__
+
 *********************
 I/O
 *********************
