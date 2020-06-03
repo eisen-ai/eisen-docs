@@ -149,6 +149,9 @@ and the call can be done in this way:
 .. autoclass:: LoadPILImageFromFilename
    :members: __init__
 
+.. autoclass:: WriteNiftiToFile
+   :members: __init__
+
 
 *********************
 Transforms
@@ -243,9 +246,6 @@ for deep learning tasks.
 .. autoclass:: PilToNumpy
    :members: __init__
 
-.. autoclass:: CropCenteredSubVolumes
-   :members: __init__
-
 .. autoclass:: MapValues
    :members: __init__
 
@@ -268,9 +268,6 @@ for deep learning tasks.
    :members: __init__
 
 .. autoclass:: RepeatTensor
-   :members: __init__
-
-.. autoclass:: WriteNiftiToFile
    :members: __init__
 
 .. autoclass:: NumpyToNifti

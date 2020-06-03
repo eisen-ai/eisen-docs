@@ -31,7 +31,7 @@ able to be used for serving. This is achieved via packaging.
 What packaging does is to create a compressed tar archive that is portable and can be deployed using TorchServing.
 This functionality is documented below.
 
-.. automodule:: eisen_deploy.packaging
+.. automodule:: eisen_deploy.packaging.packmodel
     :members:
     :private-members:
     :special-members:
@@ -49,7 +49,7 @@ queries to the server.
 This is not something users need to worry about, in fact this documentation is being included here just for development
 purposes. Handlers are included automatically in the MAR and should work transparently.
 
-.. automodule:: eisen_deploy.serving
+.. automodule:: eisen_deploy.serving.handlers
     :members:
     :private-members:
     :special-members:
@@ -96,7 +96,7 @@ Javascript (and all the other). Curl requests via terminal are also possible.
 The Python client implemented here is documented below.
 
 
-.. automodule:: eisen_deploy.client
+.. automodule:: eisen_deploy.client.client
     :members:
     :private-members:
     :special-members:
