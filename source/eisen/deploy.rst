@@ -11,13 +11,13 @@ Eisen-Deploy is included in the distribution of eisen and can therefore be obtai
 
 .. code-block:: console
 
-    pip install eisen
+    $ pip install eisen
 
 Otherwise, it is possible to obtain Eisen-Deploy by installing only the `eisen_deploy` package
 
 .. code-block:: console
 
-    pip install eisen_deploy
+    $ pip install eisen_deploy
 
 Using Eisen-Deploy can be achieved by importing the necessary modules directly in your code.
 
@@ -72,17 +72,24 @@ Start serving via:
 
 .. code-block:: console
 
-    torchserve --start --ncs --model-store model_zoo --models model.mar
+    $ torchserve --start --ncs --model-store model_zoo --models model.mar
 
 
 Stop serving via:
 
 .. code-block:: console
 
-    torchserve --stop
+    $ torchserve --stop
 
 Note that you will need a model MAR packaged via the `EisenServingMAR` object to be able to perform inference
 as explained in this doc page.
+
+.. note::
+
+    It is worth to check out the documentation of TorchServing. In particular the documentation about the configuration
+    file will uncover aspects that are very important in medical imaging and elsewhere, such as the ability to
+    configure the maximum message size (for large inputs such as volumes) and the SSL support for encryption of the
+    communication channel.
 
 
 *********************
