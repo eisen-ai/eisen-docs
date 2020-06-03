@@ -89,7 +89,8 @@ as explained in this doc page.
     It is worth to check out the documentation of TorchServing. In particular the documentation about the configuration
     file will uncover aspects that are very important in medical imaging and elsewhere, such as the ability to
     configure the maximum message size (for large inputs such as volumes) and the SSL support for encryption of the
-    communication channel.
+    communication channel. Follow this link: https://bit.ly/2U6Fpga
+
 
 
 *********************
