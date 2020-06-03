@@ -1,3 +1,7 @@
+*********************
+Getting Started
+*********************
+
 Eisen offers deployment capabilities by leveraging TorchServing as implemented in PyTorch 1.5.0 and newer releases.
 In this way, it is possible to use models trained with Eisen as prediction services through a simple HTTP interface
 that can be used directly by sending requests using any library or by leveraging the functionality offered by
