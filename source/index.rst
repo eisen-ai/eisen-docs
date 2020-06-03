@@ -71,6 +71,13 @@ Links
 
 
 .. toctree::
+   :caption: Eisen-Deploy API
+   :maxdepth: 4
+
+   eisen/deploy
+
+
+.. toctree::
     :caption: Get Started
     :maxdepth: 4
 
