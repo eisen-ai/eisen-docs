@@ -68,6 +68,28 @@ Links
 
    index
 
+
+.. toctree::
+    :caption: Get Started
+    :maxdepth: 4
+
+    eisen/getstarted
+
+
+.. toctree::
+    :caption: Tutorials
+    :maxdepth: 4
+
+    eisen/tutorials
+
+
+.. toctree::
+    :maxdepth: 4
+    :caption: Features
+
+    eisen/features
+
+
 .. toctree::
    :caption: Eisen-Core API
    :maxdepth: 4
@@ -88,24 +110,6 @@ Links
 
    eisen/cli
 
-
-.. toctree::
-    :caption: Get Started
-    :maxdepth: 4
-
-    eisen/getstarted
-
-.. toctree::
-    :caption: Tutorials
-    :maxdepth: 4
-
-    eisen/tutorials
-
-.. toctree::
-    :maxdepth: 4
-    :caption: Features
-
-    eisen/features
 
 
 Indices and tables
