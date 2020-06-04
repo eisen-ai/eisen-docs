@@ -33,7 +33,7 @@ Command line utilities for training, validation, testing and deployment are incl
 interface and purpose of each implementation is detailed here:
 
 .. automodule:: eisen_cli
-    :members: train, validate, test, serve
+    :members: train
 
 
 *********************
