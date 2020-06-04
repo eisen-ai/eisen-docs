@@ -30,7 +30,7 @@ Eisen implements an opinionated API that builds directly on PyTorch. The goal of
 
 - Easy to contribute to
 
-We have subdivided eisen in several sub-packages:
+We have subdivided Eisen in several sub-packages:
 
 - Eisen meta-package (installs everything) `pip3 install eisen`
 
@@ -38,7 +38,12 @@ We have subdivided eisen in several sub-packages:
 
 - Eisen CLI `pip3 install eisen-cli`
 
-You can also obtain Eisen as a Docker image which can be downloaded from dockerhub `(TBA)`
+- Eisen Deploy `pip3 install eisen-deploy`
+
+- Eisen Extras `pip3 install eisen-extras`
+
+You can also obtain Eisen as a Docker image which can be downloaded from dockerhub check out DockerHub at
+https://hub.docker.com/repository/docker/eisenai/eisen
 
 Eisen core modules are summarized in the figure below:
 
@@ -75,6 +80,13 @@ Links
    :maxdepth: 4
 
    eisen/deploy
+
+
+.. toctree::
+   :caption: Eisen-CLI
+   :maxdepth: 4
+
+   eisen/cli
 
 
 .. toctree::

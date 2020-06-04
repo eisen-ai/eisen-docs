@@ -13,11 +13,11 @@ Eisen-Deploy is included in the distribution of eisen and can therefore be obtai
 
     $ pip install eisen
 
-Otherwise, it is possible to obtain Eisen-Deploy by installing only the `eisen_deploy` package
+Otherwise, it is possible to obtain Eisen-Deploy by installing only the `eisen-deploy` package
 
 .. code-block:: console
 
-    $ pip install eisen_deploy
+    $ pip install eisen-deploy
 
 Using Eisen-Deploy can be achieved by importing the necessary modules directly in your code.
 

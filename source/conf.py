@@ -185,6 +185,7 @@ html_theme_options = {
     'titles_only': False
 }
 
+
 def setup(app):
     # Register a sphinx.ext.autodoc.between listener to ignore everything
     # between lines that contain the word IGNORE
