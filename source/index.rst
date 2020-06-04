@@ -77,20 +77,6 @@ Links
 
 
 .. toctree::
-    :caption: Tutorials
-    :maxdepth: 4
-
-    eisen/tutorials
-
-
-.. toctree::
-    :maxdepth: 4
-    :caption: Features
-
-    eisen/features
-
-
-.. toctree::
    :caption: Eisen-Core API
    :maxdepth: 4
 
@@ -109,6 +95,20 @@ Links
    :maxdepth: 4
 
    eisen/cli
+
+
+.. toctree::
+    :caption: Tutorials
+    :maxdepth: 4
+
+    eisen/tutorials
+
+
+.. toctree::
+    :maxdepth: 4
+    :caption: Features
+
+    eisen/features
 
 
 
