@@ -1,5 +1,5 @@
 *********************
-Getting Started
+General Information
 *********************
 
 Eisen offers a Command Line Interface (CLI) which allows model training, validation, testing and serving.
@@ -32,7 +32,7 @@ CLI
 Command line utilities for training, validation, testing and deployment are included in Eisen CLI. The
 interface and purpose of each implementation is detailed here:
 
-.. automodule:: eisen_cli.main
+.. automodule:: eisen_cli
     :members: train, validate, test, serve
 
 

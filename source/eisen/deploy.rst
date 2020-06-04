@@ -1,5 +1,5 @@
 *********************
-Getting Started
+General Information
 *********************
 
 Eisen offers deployment capabilities by leveraging TorchServing as implemented in PyTorch 1.5.0 and newer releases.
