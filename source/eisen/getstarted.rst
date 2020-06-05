@@ -24,9 +24,9 @@ Using the CLI you need to type in your terminal:
 
 To receive futher information about how to use Eisen-CLI.
 
-************************
+
 Obtain Eisen via PyPi
-************************
+================================
 
 You can install Eisen using pypi by simply executing
 
@@ -49,9 +49,8 @@ If you want to be working on the latest possible software version, you can insta
    pip3 install --upgrade git+https://github.com/eisen-ai/eisen-core.git
 
 
-*****************************
 Obtain Eisen via DockerHub
-*****************************
+================================
 
 You can obtain a Docker image from Dockerhub by executing, on a machine with a fully functional installation of
 Docker CE. You can change the `latest` tag to an Eisen version to download a specific version of Eisen.
@@ -172,6 +171,7 @@ to produce an output `dice_loss`.
 This may seem complicated, but it gives us the ability of using ANY network written in pytorch, from any code base
 and any purpose within Eisen by simply specifying how routing should be done.
 
+
 Workflow
 ================================
 
@@ -197,6 +197,7 @@ in this case, print losses and metrics on the console.
     # create Hook to monitor training
     training_loggin_hook = LoggingHook(training_workflow.id, 'Training', None)
 
+
 Running Training
 ================================
 
@@ -207,8 +208,6 @@ Finally, we train:
     # run optimization for NUM_EPOCHS
     for i in range(NUM_EPOCHS):
         training_workflow.run()
-
-
 
 
 *****************************
