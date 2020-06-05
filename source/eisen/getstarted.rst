@@ -54,11 +54,161 @@ Obtain Eisen via DockerHub
 *****************************
 
 You can obtain a Docker image from Dockerhub by executing, on a machine with a fully functional installation of
-Docker CE
+Docker CE. You can change the `latest` tag to an Eisen version to download a specific version of Eisen.
 
 .. code-block:: bash
 
-   TBA
+   docker pull eisenai/eisen:latest
+
+
+*****************************
+Train your first model
+*****************************
+
+A collection of tutorials in form of Colab notebook that you can execute on free GPUs sponsored by Google Colab
+is available at http://docs.eisen.ai/eisen/tutorials.html
+
+Snippets from the code implementing volumetric medical image segmentation on the
+Medical Segmentation Decathlon (MSD) dataset be found here. The full example is available here: http://bit.ly/2HjLlfh.
+
+
+Dataset and Transforms
+================================
+
+Assuming you have imported the necessary sub packages from Eisen and PyTorch, we start from instantiating a
+Medical Segmentation Decathlon dataset which allows us to work with the MSD data within Eisen, together with
+image loading and manipulation transforms that are necessary to make the data suitable for training.
+
+
+.. code-block:: python
+
+   # readers: one for the images, one for the labels
+    read_tform = LoadNiftyFromFilename(['image', 'label'], PATH_DATA)
+
+    # image manipulation transforms
+
+    resample_tform = ResampleNiftiVolumes(
+        ['image', 'label'],
+        [1.0, 1.0, 1.0],
+        'linear'
+    )
+
+    to_numpy_tform = NiftiToNumpy(['image', 'label'])
+
+    crop = CropCenteredSubVolumes(fields=['image', 'label'], size=[64, 64, 64])
+
+    add_channel = AddChannelDimension(['image', 'label'])
+
+    map_intensities = MapValues(['image'], min_value=0.0, max_value=1.0)
+
+    threshold_labels = ThresholdValues(['label'], threshold=0.5)
+
+
+    # create a composed transform to manipulate and load data
+    tform = Compose([
+        read_tform,
+        resample_tform,
+        to_numpy_tform,
+        crop,
+        map_intensities,
+        threshold_labels,
+        add_channel,
+    ])
+
+    # create a dataset from the training set of the MSD dataset
+    dataset = MSDDataset(
+        PATH_DATA,
+        NAME_MSD_JSON,
+        'training',
+        transform=tform
+    )
+
+Eisen uses transforms similar to those employed by other packages belonging to the PyTorch universe.
+The only difference is that Eisen represents data as dictionaries. Transform operate on dictionaries and
+are able to add, remove or change dictionary fields. Moreover, the transforms have visibility over all the
+dictionary fields belonging to a data-point, so they can make computations considering multiple aspects of the data.
+
+For example, the NiftiToNumpy transform shown above, changes the nature of the data stored in correspondence of
+the filed 'image' and 'label' of the data dictionary, converting the relative data into Numpy. The transform MapValues
+changes the range of the values of the data stored at 'image'. And so on.
+
+In this way, once we compose together the transforms and obtain a transform chain, we can create very complex
+transformation functions from basic and well tested building blocks. Moreover, we are not limited in flexibility by
+their interface, since transforms will always be called on a data dictionary which can have an arbitrary number of
+fields and carry arbitrary information. Transform calls return dictionaries as well.
+
+Workflow components
+================================
+
+Next we declare the building blocks of our training, namely Model, Metrics, Losses, and Optimizer.
+
+.. code-block:: python
+
+    # specify model and loss (building blocks)
+
+    model = EisenModuleWrapper(
+        module=VNet(input_channels=1, output_channels=1), input_names=['image'], output_names=['predictions']
+    )
+
+    loss = EisenModuleWrapper(module=DiceLoss(), input_names=['predictions', 'label'], output_names=['dice_loss'])
+
+    metric = EisenModuleWrapper(module=DiceMetric(), input_names=['predictions', 'label'], output_names=['dice_metric'])
+
+    optimizer = Adam(model.parameters(), 0.001)
+
+
+This part is indeed quite self explanatory. The only puzzling particularity could be represented by the use of
+EisenModuleWrapper object. The purpose of EisenModuleWrapper is to indicate how information from the data dictionary
+should be routed to the various modules. It also indicates what information should be added as outputs of these
+modules are computed.
+
+Let's take the first declaration making use of EisenModuleWrapper. We wrap a VNet object, and we indicate that
+the fields `['image']` should be taken from each batch and routed to the (only) input this network has.
+We also indicate that the only output of the network, should be routed to a `['predictions']` field.
+
+The loss is also wrapped, it has two inputs, which will take - in order - the content of `predictions` and `label`
+to produce an output `dice_loss`.
+
+This may seem complicated, but it gives us the ability of using ANY network written in pytorch, from any code base
+and any purpose within Eisen by simply specifying how routing should be done.
+
+Workflow
+================================
+
+At this point we declare a workflow:
+
+.. code-block:: python
+
+    # join all blocks into a workflow (training workflow)
+    training_workflow = Training(
+          model=model,
+          losses=[loss],
+          data_loader=data_loader,
+          optimizer=optimizer,
+          metrics=[metric],
+          gpu=True
+    )
+
+And in order to monitor this workflow we specify a hook, whose purpose is to receive events from the workflow and,
+in this case, print losses and metrics on the console.
+
+.. code-block:: python
+
+    # create Hook to monitor training
+    training_loggin_hook = LoggingHook(training_workflow.id, 'Training', None)
+
+Running Training
+================================
+
+Finally, we train:
+
+.. code-block:: python
+
+    # run optimization for NUM_EPOCHS
+    for i in range(NUM_EPOCHS):
+        training_workflow.run()
+
+
 
 
 *****************************
