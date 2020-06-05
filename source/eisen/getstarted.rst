@@ -158,7 +158,7 @@ Next we declare the building blocks of our training, namely Model, Metrics, Loss
     )
 
     metric = EisenModuleWrapper(
-        module=DiceMetric(), 
+        module=DiceMetric(),
         input_names=['predictions', 'label'],
         output_names=['dice_metric']
     )
@@ -172,13 +172,13 @@ should be routed to the various modules. It also indicates what information shou
 modules are computed.
 
 Let's take the first declaration making use of EisenModuleWrapper. We wrap a VNet object, and we indicate that
-the fields `['image']` should be taken from each batch and routed to the (only) input this network has.
-We also indicate that the only output of the network, should be routed to a `['predictions']` field.
+the field list `['image']` should be taken from each batch and routed to the (only) input this network has.
+We also indicate that the only output of the network, should be routed to a `predictions` field.
 
 The loss is also wrapped, it has two inputs, which will take - in order - the content of `predictions` and `label`
-to produce an output `dice_loss`.
+to produce an output `dice_loss`. Same goes for the metric.
 
-This may seem complicated, but it gives us the ability of using ANY network written in pytorch, from any code base
+This may seem complicated, but it gives us the ability of using ANY network or module from any code base
 and any purpose within Eisen by simply specifying how routing should be done.
 
 
