@@ -7,6 +7,8 @@ Features
 Eisen is built to give simple access to deep learning in medical image analysis. The main features are:
 
 * Support for common datasets such as MSD, PatchCamelyon, etc.
+* Model and Data parallelism in one line of code
+* Production-grade model deployment using TorchServing
 * Pre-built transformations to manipulate data
 * Training, Validation and Testing loops
 * Automatic logging and summary export
