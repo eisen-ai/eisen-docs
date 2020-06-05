@@ -32,7 +32,7 @@ You can install Eisen using pypi by simply executing
 
 .. code-block:: bash
 
-   pip3 install --upgrade eisen
+   pip install --upgrade eisen
 
 This will install all the sub packages of the Eisen project, including eisen-core and eisen-cli.
 
@@ -40,13 +40,13 @@ To install only Eisen-Core we suggest you execute
 
 .. code-block:: bash
 
-   pip3 install --upgrade eisen-core
+   pip install --upgrade eisen-core
 
 If you want to be working on the latest possible software version, you can install from our GIT repository by executing
 
 .. code-block:: bash
 
-   pip3 install --upgrade git+https://github.com/eisen-ai/eisen-core.git
+   pip install --upgrade git+https://github.com/eisen-ai/eisen-core.git
 
 
 Obtain Eisen via DockerHub
@@ -146,12 +146,22 @@ Next we declare the building blocks of our training, namely Model, Metrics, Loss
     # specify model and loss (building blocks)
 
     model = EisenModuleWrapper(
-        module=VNet(input_channels=1, output_channels=1), input_names=['image'], output_names=['predictions']
+        module=VNet(input_channels=1, output_channels=1),
+        input_names=['image'],
+        output_names=['predictions']
     )
 
-    loss = EisenModuleWrapper(module=DiceLoss(), input_names=['predictions', 'label'], output_names=['dice_loss'])
+    loss = EisenModuleWrapper(
+        module=DiceLoss(),
+        input_names=['predictions', 'label'],
+        output_names=['dice_loss']
+    )
 
-    metric = EisenModuleWrapper(module=DiceMetric(), input_names=['predictions', 'label'], output_names=['dice_metric'])
+    metric = EisenModuleWrapper(
+        module=DiceMetric(), 
+        input_names=['predictions', 'label'],
+        output_names=['dice_metric']
+    )
 
     optimizer = Adam(model.parameters(), 0.001)
 
