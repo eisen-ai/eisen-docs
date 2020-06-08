@@ -93,6 +93,9 @@ The transforms are fed individual entries of the list and act on one or multiple
 .. autoclass:: EMIDEC
    :members: __init__
 
+.. autoclass:: Brats2020
+   :members: __init__
+
 *********************
 I/O
 *********************
